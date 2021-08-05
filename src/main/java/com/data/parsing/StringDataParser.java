@@ -19,6 +19,10 @@ public class StringDataParser implements DataParser
          String[] info = new String[6];
 
          List<Customer> list = new LinkedList<Customer>();
+
+         if(data == null || data.length()==0)
+           return list;
+
          String[] customerData = data.split("\\n");
 
          for(String customerInfo : customerData)
